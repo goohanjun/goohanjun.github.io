@@ -13,6 +13,10 @@
     {{- site.title | default: "Untitled Website" -}}
     {%- if site.subtitle -%}{{- site.subtitle | prepend: ' - ' -}}{%- endif -%}
   {%- endcapture -%}
+  <!-- Tag collect -->
+  {% if site.tags != "" %}
+    {% include collecttags.html %}
+  {% endif %}
   {%- assign _page_title = _page_title | escape -%}
   {%- assign _page_description = page.description | default: site.description | default: _page_title | escape -%}
 
