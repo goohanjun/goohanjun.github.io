@@ -1,6 +1,6 @@
 ---
 title: "Tags"
-layout: post
+layout: page
 tags:   
 exclude: false
 robots: noindex
