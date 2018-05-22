@@ -1,7 +1,7 @@
 ---
-layout: post
 title: "Tags"
-tag: 
+layout: post
+tags:   
 exclude: false
 robots: noindex
 ---
