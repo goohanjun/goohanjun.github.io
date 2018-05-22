@@ -38,6 +38,7 @@ total_tags = set(total_tags)
 
 old_tags = glob.glob(tag_dir + '*.md')
 for tag in old_tags:
+    if "tag.md" in tag: continue
     os.remove(tag)
     
 if not os.path.exists(tag_dir):
