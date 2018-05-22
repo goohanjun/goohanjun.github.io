@@ -11,12 +11,6 @@ exclude: false
 	  <div class="container">
 			<header>
         <h2>{{- page.tag -}}</h2>
-        <span>[
-          {% for tag in page.tags %}
-          {% capture tag_name %}{{ tag }}{% endcapture %}
-          <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
-          {% endfor %}
-        ]</span>
 
 				<p>{% if page.author %}{{ page.author }}, {% endif %}{{- page.date | date_to_long_string -}}</p>
 			</header>

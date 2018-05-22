@@ -11,7 +11,7 @@ exclude: false
 	  <div class="container">
 			<header>
         <h2>{{- page.title -}}</h2>
-        {% if page.tags.length !=0 %}
+        {% if page.tags != empty %}
         <span>tags: [
           {% for tag in page.tags %}
           {% capture tag_name %}{{ tag }}{% endcapture %}
