@@ -10,6 +10,7 @@
     {%- unless _pages == null -%}
       {%- assign _pages = _pages | sort: 'order' -%}
       {%- for _page in _pages -%}
+      {% unless page.exclude %}
         {%- assign _title = _page.title | default: _page.layout -%}
         {%- assign _slug = _title | slugify -%}
         {%- assign _icon = _page.icon | default: 'fa-link' -%}
@@ -25,6 +26,7 @@
         {%- else -%}
           <li><a href="{{- '/' | absolute_url -}}" id="broken-link"><span class="icon fa-unlink">[broken link]</span></a></li>
         {%- endif -%}
+      {% endunless %}
       {%- endfor -%}
     {%- endunless -%}
     {%- assign _sections = include.section_items | where_exp: "section", "section.hide != true" -%}
